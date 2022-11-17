@@ -19,6 +19,7 @@ CREATE TABLE messages (
   user INT,
   username CHAR(15),
   message VARCHAR(255),
+  roomname VARCHAR(15),
   PRIMARY KEY (id),
   FOREIGN KEY (user) REFERENCES users(id)
 );
