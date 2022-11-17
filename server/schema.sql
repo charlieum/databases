@@ -10,15 +10,15 @@ USE chat;
 
 CREATE TABLE users (
   id INT AUTO_INCREMENT,
-  name CHAR(15),
+  username CHAR(15),
   PRIMARY KEY (id)
 );
 
 CREATE TABLE messages (
   id INT AUTO_INCREMENT,
   user INT,
+  username CHAR(15),
   message VARCHAR(255),
-  -- room INT,
   PRIMARY KEY (id),
   FOREIGN KEY (user) REFERENCES users(id)
 );
